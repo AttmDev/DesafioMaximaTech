@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Cores para o tema-->
+    <color name="colorPrimary">@color/azulMaisClaro</color>
+    <color name="colorPrimaryDark">@color/azulMaisEscuro</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!--Cores gerais-->
+    <color name="azulMaisClaro">#186096 </color>
+    <color name="azulMaisEscuro">#00386C</color>
+    <color name="cinza">#F1F1F1</color>
+    <color name="branco">#FFFFFF</color>
+
+    <!--  Tela de Menu  -->
+    <color name="textoBotoesMenu">#232323</color>
+    <color name="fundoBotoesMenu">@color/branco</color>
+    <color name="fundoBotoesMenuPressionado">#80232323</color>
+    <color name="fundoMenuPrincipal">@color/cinza</color>
+
+</resources>

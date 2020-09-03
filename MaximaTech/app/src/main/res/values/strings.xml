@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MaximaTech</string>
+
+    <!-- Menu options text -->
+    <string name="menu_opt_cliente">Clientes</string>
+    <string name="menu_opt_pedidos">Pedidos</string>
+    <string name="menu_opt_resumo_vendas">Resumo de vendas</string>
+    <string name="menu_opt_ferramentas">Ferramentas</string>
+
+    <!--  Bottom Navigation Labels  -->
+    <string name="label_dados_fragment">Dados</string>
+    <string name="label_historico_pedidos">Hist. Pedidos</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!--  ImageViews Content Descriptions  -->
+    <string name="cd_logo_maxima">Logotipo maxima</string>
+
+
+    <string name="title_activity_clientes">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+</resources>
