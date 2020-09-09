@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="pedido"
+            type="com.attm.maximatech.data.entity.Pedidos" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+        <FrameLayout
+            android:id="@+id/icon_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_shape"
+            android:backgroundTint="@color/cinzaEscuro"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginVertical="2dp"
+            android:layout_marginHorizontal="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/item_divider">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:src="@drawable/ic_maxima_em_processamento"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        </FrameLayout>
+        <TextView
+            android:text="Nº Ped. RCA/ERP:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/numero_pedido_label"
+            android:textStyle="bold"
+            android:textColor="@color/history_label_font"
+            android:textSize="4pt"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/icon_start"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/numero_pedido_value"
+            android:text="@{String.valueOf(pedido.numeroPedidoRca)}"
+            android:textColor="@color/preto"
+            android:textStyle="bold"
+            android:textSize="4pt"
+            android:layout_marginStart="3dp"
+            app:layout_constraintStart_toEndOf="@id/numero_pedido_label"
+            app:layout_constraintTop_toTopOf="@id/numero_pedido_label"
+            />
+
+        <TextView
+            android:text="Cliente:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cliente_label"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/history_label_font"
+            android:textSize="4pt"
+            app:layout_constraintStart_toEndOf="@id/icon_start"
+            app:layout_constraintTop_toBottomOf="@id/numero_pedido_label"
+            app:layout_constraintBottom_toTopOf="@id/status_value"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cliente_value"
+            android:textColor="@color/preto"
+            android:layout_marginStart="3dp"
+            android:textStyle="bold"
+            android:text="@{String.valueOf(pedido.codigoCliente) + ` - ` + pedido.nomeCliente}"
+            android:textSize="4pt"
+            app:layout_constraintStart_toEndOf="@id/cliente_label"
+            app:layout_constraintTop_toTopOf="@id/cliente_label"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/status_value"
+            android:textColor="@color/preto"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp"
+            android:textSize="4pt"
+            android:text="@{pedido.status}"
+            app:layout_constraintBottom_toTopOf="@id/item_divider"
+            app:layout_constraintStart_toEndOf="@id/icon_start"
+            />
+
+        <LinearLayout
+            android:id="@+id/critica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/item_divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/critica_label"
+                android:textColor="@color/history_label_font"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center"
+                android:textSize="4pt"
+                android:text="Crítica:" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/critica_val"
+                android:src="@drawable/ic_maxima_critica_sucesso"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_val"
+            android:textColor="@color/history_label_font"
+            android:textStyle="bold"
+            android:layout_margin="4dp"
+            android:textSize="4pt"
+            android:text="@{pedido.formattedTime}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_maxima_legenda_corte"
+            app:layout_constraintTop_toBottomOf="@id/time_val"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/price_value"
+            android:scaleX="0.4"
+            android:scaleY="0.4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/price_value"
+            android:textColor="@color/preto"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp"
+            android:textSize="4pt"
+            android:text="R$ 0,00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/item_divider"
+            />
+
+        <View
+            android:id="@+id/item_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="@id/cliente_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

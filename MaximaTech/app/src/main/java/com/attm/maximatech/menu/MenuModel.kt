@@ -10,10 +10,10 @@ data class MenuOptionModel (
 )
 
 object MenuOptions {
-    val CLIENTE = MenuOptionModel(R.drawable.ic_maxima_pessoas, R.string.menu_opt_cliente)
-    val PEDIDOS = MenuOptionModel(R.drawable.ic_maxima_pedido, R.string.menu_opt_pedidos)
-    val VENDAS = MenuOptionModel(R.drawable.ic_maxima_resumo_vendas, R.string.menu_opt_resumo_vendas)
-    val FERRAMENTAS = MenuOptionModel(R.drawable.ic_maxima_ferramentas, R.string.menu_opt_ferramentas)
+    private val CLIENTE = MenuOptionModel(R.drawable.ic_maxima_pessoas, R.string.menu_opt_cliente)
+    private val PEDIDOS = MenuOptionModel(R.drawable.ic_maxima_pedido, R.string.menu_opt_pedidos)
+    private val VENDAS = MenuOptionModel(R.drawable.ic_maxima_resumo_vendas, R.string.menu_opt_resumo_vendas)
+    private val FERRAMENTAS = MenuOptionModel(R.drawable.ic_maxima_ferramentas, R.string.menu_opt_ferramentas)
 
     fun getValues(): List<MenuOptionModel> = listOf(CLIENTE, PEDIDOS, VENDAS, FERRAMENTAS)
 }

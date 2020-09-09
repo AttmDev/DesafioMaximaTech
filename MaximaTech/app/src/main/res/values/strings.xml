@@ -10,13 +10,36 @@
     <!--  Bottom Navigation Labels  -->
     <string name="label_dados_fragment">Dados</string>
     <string name="label_historico_pedidos">Hist. Pedidos</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="label_alvaras_fragment">Alvarás</string>
+
+    <!--  Rotulos toolbar  -->
+    <string name="label_dados_toolbar">Dados do cliente</string>
+    <string name="label_hist_toolbar">Hist. de pedidos</string>
+    <string name="label_alvaras_toolbar">Alvarás</string>
+
 
     <!--  ImageViews Content Descriptions  -->
     <string name="cd_logo_maxima">Logotipo maxima</string>
+    <string name="cd_menu_option_icon">Icone de opção do menu</string>
+    <string name="cd_status_conexao">Icone de Status de conexão</string>
 
+    <!--  SnackBars  -->
+    <string name="snack_not_implemented_yet">Opção não implementada</string>
 
     <string name="title_activity_clientes">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
+    <string name="card_dados_do_cliente_title">Dados do cliente</string>
+    <string name="contatos_card_label">Contatos</string>
+    <string name="button_verify_client_stats">Verificar status do cliente</string>
+    <string name="cel_label">Celular:</string>
+    <string name="nascimento_contact_label">Data Nasc.:</string>
+    <string name="card_email_label">E-mail:</string>
+    <string name="conj_label">Cônjugue:</string>
+    <string name="conj_nasc_label">Data Nasc. Cônjugue:</string>
+    <string name="type_label">Tipo:</string>
+    <string name="time_label">Time:</string>
+    <string name="hobbie_label">Hobbie:</string>
+    <string name="no_info_value">Não Informado</string>
+    <string name="enderecos">Endereços:</string>
 </resources>

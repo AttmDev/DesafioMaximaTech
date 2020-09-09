@@ -10,12 +10,22 @@
     <color name="azulMaisClaro">#186096 </color>
     <color name="azulMaisEscuro">#00386C</color>
     <color name="cinza">#F1F1F1</color>
+    <color name="cinzaEscuro">#606060</color>
     <color name="branco">#FFFFFF</color>
+    <color name="preto">#000000</color>
 
     <!--  Tela de Menu  -->
     <color name="textoBotoesMenu">#232323</color>
     <color name="fundoBotoesMenu">@color/branco</color>
     <color name="fundoBotoesMenuPressionado">#80232323</color>
     <color name="fundoMenuPrincipal">@color/cinza</color>
+    <color name="history_label_font">#95989A</color>
 
+<!--  Atividade Clientes  -->
+    <color name="bottom_nav_background">@color/azulMaisClaro</color>
+
+    <color name="nome_fantasia_text">#606060</color>
+
+    <color name="card_attr_names">#95989A</color>
+    <color name="button_verify_client_stats">#638735</color>
 </resources>

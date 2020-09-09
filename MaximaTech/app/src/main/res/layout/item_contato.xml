@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="contact"
+            type="com.attm.maximatech.data.entity.ContatoCliente" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="8dp">
+        <TextView
+            android:maxLines="1"
+            android:id="@+id/contact_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="4.9pt"
+            android:textColor="@color/preto"
+            android:text="@{contact.nome}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/contact_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:shrinkColumns="3"
+
+            >
+
+            <TableRow
+                android:paddingTop="4dp">
+
+
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/tel_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Telefone:"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/card_attr_names"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/tel_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{contact.telefone ?? @string/no_info_value}"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/preto"
+                    android:paddingVertical="1.3dp"
+                    android:layout_marginStart="4dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_maxima_telefone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:maxLines="1"
+                        android:id="@+id/email_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_email_label"
+                        android:textSize="4.5pt"
+                        android:textColor="@color/card_attr_names"
+                        android:layout_marginStart="2dp"/>
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/email_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{contact.e_mail ?? @string/no_info_value}"
+                    android:textSize="4.5pt"
+                    android:paddingVertical="1.3dp"
+                    android:textColor="@color/preto"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_maxima_email" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/cel_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cel_label"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/card_attr_names"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/cel_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{contact.celular ?? @string/no_info_value}"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/preto"
+                    android:paddingVertical="1.3dp"
+                    android:layout_marginStart="4dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_maxima_telefone" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/nasc_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nascimento_contact_label"
+                    android:textSize="4.5pt"
+                    android:layout_marginStart="2dp"
+                    android:textColor="@color/card_attr_names"/>
+
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/nasc_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{contact.dataNascimento ?? @string/no_info_value}"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/preto"
+                    android:layout_marginStart="2dp"/>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/conj_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/conj_label"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/card_attr_names"/>
+
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/conj_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{contact.conjugue ?? @string/no_info_value}"
+                    android:paddingVertical="1.3dp"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/preto"
+                    android:layout_marginStart="4dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/conj_nasc_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/conj_nasc_label"
+                    android:layout_marginStart="2dp"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/card_attr_names"/>
+
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/conj_nasc_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="@{contact.dataNascimentoConjugue ?? @string/no_info_value}"
+                    android:textColor="@color/preto"
+                    android:textSize="4.5pt" />
+                </LinearLayout>
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/tipo_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_label"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/card_attr_names"/>
+
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/tipo_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{contact.tipo ?? @string/no_info_value}"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/preto"
+                    android:paddingVertical="1.3dp"
+                    android:layout_marginStart="4dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/time_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_label"
+                    android:layout_marginStart="2dp"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/card_attr_names"/>
+
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/time_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="@{contact.time ?? @string/no_info_value}"
+                    android:textColor="@color/preto"
+                    android:textSize="4.5pt" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/hobbie_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hobbie_label"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/card_attr_names"/>
+
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/hobbie_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_info_value"
+                    android:paddingVertical="1.3dp"
+                    android:textSize="4.5pt"
+                    android:textColor="@color/preto"
+                    android:layout_marginStart="4dp"/>
+            </TableRow>
+
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
